@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday Vault — Real Black Friday Deals, Checked 27 Nov 2026</title>
+<meta name="description" content="60 real Black Friday deals, each checked by hand on 27 Nov 2026 with its store, sale price, usual price, discount and an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 1.8 14.6 8l6.8.8-5 4.7 1.3 6.7L12 16.9 6.3 20.2 7.6 13.5l-5-4.7 6.8-.8L12 1.8z" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-text">BLACK FRIDAY <strong>VAULT</strong></span>
+    </a>
+    <nav class="site-nav">
+      <a href="#all-deals">All deals</a>
+      <a href="#top-deals">Top deals</a>
+      <a href="#how-we-check">How we check</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div id="list-view">
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero-kicker">Black Friday &amp; Cyber Monday 2026 · Prices checked by hand on 27 Nov 2026</p>
+        <h1>Real deals. Real prices.<br><span class="hero-gold">No inflated “was” prices.</span></h1>
+        <p class="hero-sub">Every deal below was read from a deals source that names the store and the price it saw there — with the check time, the source and an honest verdict on whether it is really a deal. If a price could not be verified, it is not on this page.</p>
+        <dl class="stats">
+          <div class="stat"><dt>Deals checked</dt><dd id="stat-deals">–</dd></div>
+          <div class="stat"><dt>Stores</dt><dd id="stat-stores">–</dd></div>
+          <div class="stat"><dt>Categories</dt><dd id="stat-cats">–</dd></div>
+          <div class="stat"><dt>Average discount</dt><dd id="stat-avg">–</dd></div>
+          <div class="stat"><dt>Total you could save</dt><dd id="stat-saved">–</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="wrap controls" id="all-deals" aria-label="Search and filter deals">
+      <h2 class="section-title">All deals</h2>
+      <div class="control-row">
+        <label class="search-wrap">
+          <span class="visually-hidden">Search deals</span>
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="search-box" type="search" placeholder="Search a product, store or category…" autocomplete="off">
+        </label>
+        <label>Store
+          <select id="store-filter"><option value="All">All stores</option></select>
+        </label>
+        <label>Min. discount
+          <select id="min-discount">
+            <option value="0">Any discount</option>
+            <option value="20">20% off or more</option>
+            <option value="30">30% off or more</option>
+            <option value="40">40% off or more</option>
+            <option value="50">50% off or more</option>
+          </select>
+        </label>
+        <label>Sort by
+          <select id="sort-order">
+            <option value="verdict">Best verdict</option>
+            <option value="discount">Biggest discount</option>
+            <option value="price">Lowest price</option>
+            <option value="saved">Most saved</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </label>
+        <button id="reset-filters" type="button">Reset</button>
+      </div>
+      <div class="chips" id="category-chips" role="group" aria-label="Filter by category"></div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="grid" id="deal-grid"></div>
+    </section>
+
+    <section class="wrap" id="top-deals">
+      <h2 class="section-title">Top deals <span class="section-sub">— record lows and the deepest verified cuts first</span></h2>
+      <div class="grid" id="top-grid"></div>
+    </section>
+  </div>
+
+  <div id="detail-view" class="wrap" hidden></div>
+
+  <section class="wrap methodology" id="how-we-check">
+    <h2 class="section-title">How we check a deal</h2>
+    <ol class="method-list">
+      <li><strong>Read, never guess.</strong> A price only makes this page if a deals source showed it — naming the store, the sale price and the usual price — when we checked on 27 Nov 2026. Deals with conflicting prices across sources were left out.</li>
+      <li><strong>Discounts are computed, not quoted.</strong> The % off on every card is (usual − sale) ÷ usual from the two prices shown. If the math does not add up, the deal does not belong here.</li>
+      <li><strong>Store links go to the store.</strong> The product page when the research exposed one; otherwise the store's own search for that exact product. No product URL was ever invented.</li>
+      <li><strong>The verdict is honest.</strong> “Record low” only when a tracker called it an all-time or record low. 40%+ off list is a strong deal; 20–39% a good deal; under 20% a modest deal — even when it is the only console deal of the year.</li>
+    </ol>
+    <p class="checked-note" id="checked-note"></p>
+    <p class="fine-print">Prices are in US dollars, before tax, as checked on 27 Nov 2026 (WITA). Black Friday prices move by the hour — the store page is the final word. Black Friday Vault is an independent deal finder and is not affiliated with any store named here.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Black Friday Vault</strong> — a deal finder built for shoppers hunting a real bargain, Black Friday &amp; Cyber Monday 2026.</p>
+    <p>60 deals · 11 stores · 18 categories · all prices checked 27 Nov 2026.</p>
+  </div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
